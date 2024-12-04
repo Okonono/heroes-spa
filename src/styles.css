@@ -1,22 +1,43 @@
-/* Asegura que las imágenes dentro de .col-4 se ajusten */
+/* Estilo base para las imágenes */
 .col-4 img {
-    width: 100%; /* Ocupa el ancho completo del contenedor */
-    height: auto; /* Mantén la proporción de la imagen */
-    object-fit: cover; /* Llena el contenedor sin deformar la imagen */
+    width: 100%; /* Ocupa todo el ancho */
+    height: auto; /* Mantén la proporción */
+    object-fit: cover; /* Llena el contenedor sin deformar */
 }
 
-/* Ajustes específicos para pantallas más pequeñas */
+/* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
-    .col-4 {
-        flex: 0 0 100%; /* Hace que la columna ocupe todo el ancho en móviles */
-        max-width: 100%;
+    .row.no-gutters {
+        flex-direction: column; /* Cambia las tarjetas a diseño vertical */
     }
 
     .card {
-        flex-direction: column; /* Cambia la disposición de las tarjetas a vertical en móviles */
+        display: flex;
+        flex-direction: row; /* Coloca la imagen y el texto en la misma fila */
+        align-items: center;
+        gap: 10px; /* Espacio entre la imagen y el texto */
+        padding: 10px; /* Espaciado interno */
     }
 
-    .col-4 img {
-        max-height: 200px; /* Limita la altura de la imagen si es muy grande (opcional) */
+    .col-4 {
+        flex: 0 0 auto; /* Ajusta el tamaño para no ocupar todo el ancho */
+        max-width: 30%; /* La imagen ocupa el 30% de la tarjeta */
+    }
+
+    .col-8 {
+        flex: 1; /* El texto ocupa el espacio restante */
+    }
+
+    .card-body {
+        text-align: left; /* Ajusta la alineación del texto */
+        font-size: 14px; /* Opcional: reduce el tamaño del texto */
+    }
+
+    .card-title {
+        font-size: 16px; /* Ajusta el tamaño del título */
+    }
+
+    .card-text {
+        margin-bottom: 5px; /* Espacio entre líneas */
     }
 }
