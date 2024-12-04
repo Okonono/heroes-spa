@@ -1,6 +1,11 @@
-/* Estilo base para las imágenes */
-.col-4 img {
-    width: 100%; /* Ocupa todo el ancho */
-    height: auto; /* Mantén la proporción */
-    object-fit: cover; /* Llena el contenedor sin deformar */
+@media (max-width: 768px) {
+    .card img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .card-body {
+        text-align: center; /* Opcional: centra el texto en móviles */
+    }
 }
