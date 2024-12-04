@@ -1,0 +1,5 @@
+.col-4 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Esto asegura que la imagen llene su contenedor sin deformarse */
+}
